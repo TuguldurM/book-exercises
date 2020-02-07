@@ -24,4 +24,5 @@ left_join(avg_arr_delay_dest, airports, by = "faa")
 flights %>%
   group_by(carrier) %>%
   summarize(avg_arr_delay_dest = mean(arr_delay, na.rm = T)) %>%
-  left_join(airlines, by = "carrier")
+  left_join(airlines, by = "carrier") %>%
+  arrange(-avg_arr_delay_dest)
