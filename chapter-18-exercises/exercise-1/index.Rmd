@@ -1,0 +1,21 @@
+---
+title: "Movie Review"
+author: "Tuguldur Myagmarsuren"
+date: "2/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+source("exercise.R")
+```
+
+## `r recent_review$headline `
+>
+`r recent_review$short_summary`
+>
+
+```{r link, include=FALSE}
+link_markdown <- paste("[link to full review]", "(" ,recent_review$link, ")", sep = "")
+```
+
+To read the full review go to `r link_markdown`
